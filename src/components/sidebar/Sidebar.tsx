@@ -2,7 +2,13 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { ChevronLeft, ChevronRight, User, School, LogOut, Settings,BookOpenCheck,Backpack,Presentation,LayoutDashboard,GraduationCap } from 'lucide-react';
+import { ChevronLeft, ChevronRight, User, School, LogOut, Settings, BookOpenCheck, Backpack, Presentation, LayoutDashboard, GraduationCap } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 import ThemeToggle from '../theme/ThemeToggle';
 import { cn } from '@/lib/utils';
 
@@ -21,7 +27,7 @@ export default function Sidebar() {
     { name: t('mycourses'), icon: <School />, href: '#' },
     { name: t('myevaluations'), icon: <BookOpenCheck />, href: '#' },
     { name: t('myhomeworks'), icon: <Backpack />, href: '#' },
-    {name: t('myprojects'), icon: <Presentation />, href: '#' },
+    { name: t('myprojects'), icon: <Presentation />, href: '#' },
     { name: t('myapps'), icon: <LayoutDashboard />, href: '#' },
     { name: t('learnresources'), icon: <GraduationCap />, href: '#' },
   ];
@@ -61,7 +67,17 @@ export default function Sidebar() {
               href={item.href}
               className="flex items-center rounded-md p-3 text-gray-300 hover:bg-gray-700"
             >
-              <span className="flex-shrink-0">{item.icon}</span>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <span className="flex-shrink-0">{item.icon}</span>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p className="text-sm font-medium text-gray-100 dark:text-gray-900">
+                      {item.name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               {!isCollapsed && (
                 <span className="ml-3 overflow-hidden transition-all">
                   {item.name}
