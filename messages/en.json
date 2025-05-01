@@ -1,0 +1,14 @@
+{
+    "Home": {
+        "button1": "Button 1",
+        "button2": "Button 2"
+    },
+    "Sidebar": {
+        "mycourses": "My courses",
+        "myevaluations": "My evaluations",
+        "myhomeworks": "My homeworks",
+        "myprojects": "My projects",
+        "myapps": "My applications",
+        "learnresources": "Learning resources"
+    }
+}
