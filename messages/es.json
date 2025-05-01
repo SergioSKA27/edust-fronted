@@ -10,6 +10,12 @@
         "myprojects": "Mis proyectos",
         "myapps": "Mis aplicaciones",
         "learnresources": "Recursos de aprendizaje"
+    },
+    "Notificationsdashboard": {
+        "title": "Notificaciones",
+        "nonread": "Tienes 3 notificaciones no leídas",
+        "markasread": "Marcar como leído",
+        "markallasread": "Marcar todo como leído"
     }
 
 }

@@ -10,5 +10,11 @@
         "myprojects": "My projects",
         "myapps": "My applications",
         "learnresources": "Learning resources"
+    },
+    "Notificationsdashboard": {
+        "title": "Notifications",
+        "nonread": "You have 3 unread notifications",
+        "markasread": "Mark as read",
+        "markallasread": "Mark all as read"
     }
 }
