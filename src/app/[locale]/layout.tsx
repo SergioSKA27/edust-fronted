@@ -11,6 +11,8 @@ import {notFound} from 'next/navigation';
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from '@/context/ThemeContext';
 import Sidebar from "@/components/sidebar/Sidebar";
+import ThemeToggle from '@/components/theme/ThemeToggle';
+
 import {routing} from '@/i18n/routing';
 
 
@@ -55,6 +57,9 @@ export default async function LocaleLayout({
               <main className="flex-1 overflow-auto p-8">
                 {children}
               </main>
+              <div className="fixed bottom-4 right-4">
+                <ThemeToggle />
+              </div>
             </div>
           </ThemeProvider>
         </NextIntlClientProvider>
