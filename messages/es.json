@@ -24,7 +24,13 @@
         "removefavorite": "Eliminar de favoritos",
         "viewcourse": "Ir al curso",
         "progress": "Progreso",
-        "lessons": "Lecciones"
+        "lessons": "Lecciones",
+        "owner": "Propietario",
+        "students": "Estudiantes",
+        "modules": "Módulos",
+        "manage": "Gestionar",
+        "courseactivity": "Actividad del curso",
+        "member": "Miembro"
 
     },
     "Activities": {
@@ -53,7 +59,32 @@
         "fri": "Vie",
         "sat": "Sáb"
         
+    },
+    "MyCoursesPage": {
+        "title": "Mis cursos",
+        "search": "Buscar cursos",
+        "filter": "Filtrar por",
+        "allcourses": "Todos los cursos",
+        "mycourses": "Mis cursos",
+        "favorites": "Favoritos",
+        "enrolled": "Inscrito",
+        "notstarted": "No iniciado",
+        "inprogress": "En progreso",
+        "completed": "Completado"
+    },
+    "CourseCategories": {
+      "ownerCourses": "Cursos Propíos",
+      "noOwnerCourses": "No tienes cursos propios",
+      "enrolledCourses": "Cursos Inscritos",
+      "noEnrolledCourses": "No tienes cursos inscritos",
+      "notEnrolledCourses": "Cursos No Inscritos",
+      "noAvailableCourses": "No hay cursos disponibles",
+      "privateCourses": "Cursos Privados",
+      "noPrivateCourses": "No tienes cursos privados",
+      "publicCourses": "Cursos Públicos",
+      "noPublicCourses": "No tienes cursos públicos"
     }
+
 
 
 

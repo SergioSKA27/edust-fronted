@@ -24,7 +24,13 @@
         "removefavorite": "Remove from favorites",
         "viewcourse": "Go to course",
         "progress": "Progress",
-        "lessons": "Lessons"
+        "lessons": "Lessons",
+        "owner": "Owner",
+        "students": "Students",
+        "modules": "Modules",
+        "manage": "Manage",
+        "courseactivity": "Course activity",
+        "member": "Member"
     },
     "Activities": {
         "lesson": "Lesson",
@@ -51,6 +57,30 @@
         "thu": "Thu",
         "fri": "Fri",
         "sat": "Sat"
+    },
+    "MyCoursesPage": {
+        "title": "My courses",
+        "search": "Search",
+        "filter": "Filter",
+        "allcourses": "All courses",
+        "mycourses": "My courses",
+        "favorites": "Favorites",
+        "enrolled": "Enrolled",
+        "notstarted": "Not started",
+        "inprogress": "In progress",
+        "completed": "Completed"
+    },
+    "CourseCategories": {
+      "ownerCourses": "Owned Courses",
+      "noOwnerCourses": "You don't have owned courses",
+      "enrolledCourses": "Enrolled Courses",
+      "noEnrolledCourses": "You don't have enrolled courses",
+      "notEnrolledCourses": "Not Enrolled Courses",
+      "noAvailableCourses": "You don't have available courses",
+      "privateCourses": "Private Courses",
+      "noPrivateCourses": "You don't have private courses",
+      "publicCourses": "Public Courses",
+      "noPublicCourses": "You don't have public courses"
     }
 
 }
