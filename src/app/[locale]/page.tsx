@@ -15,16 +15,6 @@ interface BreadcrumbItemType {
   label: string;
   href?: string; // Opcional para el último elemento que es solo texto
 }
-const breadcrumbHome: BreadcrumbItemType = {
-  label: 'Inicio',
-  href: '#',
-}
-
-const breadcrumbDashboard: BreadcrumbItemType = {
-  label: 'Dashboard',
-  href: '#',
-}
-
 
 const breadcrumbitems: BreadcrumbItemType[] = [
   {
