@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import CourseCard from '@/components/courses/coursecard';
 import NextActivitiesCard from "@/components/activities/nextacts";
 import ActivityCalendar from '@/components/calendar/activitycalendar';
+import { NavigationBar } from '@/components/navigation/navibar';
 
 
 // Define el tipo para un elemento del breadcrumb
@@ -23,6 +24,20 @@ const breadcrumbDashboard: BreadcrumbItemType = {
   label: 'Dashboard',
   href: '#',
 }
+
+
+const breadcrumbitems: BreadcrumbItemType[] = [
+  {
+    label: 'Inicio',
+    href: '#',
+  },
+  {
+    label: 'Dashboard',
+    href: '#',
+  }
+  
+]
+
 
 const dummyCourses = [
   {
@@ -123,43 +138,40 @@ export default function Home() {
   const t = useTranslations('Home');
   return (
     <div className="w-full mx-auto">
-      <MainBreadcrumb
-        items={[
-          breadcrumbHome,
-          breadcrumbDashboard
-        ]}
-      />
-      <div className="flex flex-col gap-2 p-2 pl-0">
-        <div className="flex flex-row items-center justify-between">
-          <h1 className="text-2xl font-bold">{t('mycourses')}</h1>
-          <Button variant="link" className="text-sm text-slate-900 dark:text-slate-200 hover:text-slate-700 dark:hover:text-slate-300" onClick={() => {}}>
-            {t('viewallcourses')}
-          </Button>
-        </div>
-
-        <Separator className="my-0" />
-      </div>
-      <div className="flex flex-row gap-5 p-2 pt-0.5 pl-0">
-        {dummyCourses.map((course, index) => (
-          <CourseCard
-            key={index}
-            courseName={course.courseName}
-            courseDescription={course.courseDescription}
-            courseProgress={course.courseProgress}
-            participantsAvatars={course.participantsAvatars}
-            favorite={course.favorite}
-            category={course.category}
-            completedLessons={course.completedLessons}
-            totalLessons={course.totalLessons}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row p-2 justify-between gap-5 pl-0">
-          <NextActivitiesCard activities={activities} />
-          <div className="flex flex-col gap-2 max-w-[420px]">
-            <CardDemo />
-            <ActivityCalendar activities={activities} />
+      <NavigationBar items={breadcrumbitems} />
+      <div className="w-full">
+        <div className="flex flex-col gap-2 p-2 pl-0">
+          <div className="flex flex-row items-center justify-between">
+            <h1 className="text-2xl font-bold">{t('mycourses')}</h1>
+            <Button variant="link" className="text-sm text-slate-900 dark:text-slate-200 hover:text-slate-700 dark:hover:text-slate-300" onClick={() => {}}>
+              {t('viewallcourses')}
+            </Button>
           </div>
+
+          <Separator className="my-0" />
+        </div>
+        <div className="flex flex-row gap-5 p-2 pt-0.5 pl-0">
+          {dummyCourses.map((course, index) => (
+            <CourseCard
+              key={index}
+              courseName={course.courseName}
+              courseDescription={course.courseDescription}
+              courseProgress={course.courseProgress}
+              participantsAvatars={course.participantsAvatars}
+              favorite={course.favorite}
+              category={course.category}
+              completedLessons={course.completedLessons}
+              totalLessons={course.totalLessons}
+            />
+          ))}
+        </div>
+        <div className="flex flex-row p-2 justify-between gap-5 pl-0">
+            <NextActivitiesCard activities={activities} />
+            <div className="flex flex-col gap-2 max-w-[420px]">
+              <CardDemo />
+              <ActivityCalendar activities={activities} />
+            </div>
+        </div>
       </div>
   </div>
   );
