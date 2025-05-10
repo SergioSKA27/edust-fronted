@@ -1,7 +1,9 @@
 {
     "Home": {
         "button1": "Botón 1",
-        "button2": "Botón 2"
+        "button2": "Botón 2",
+        "mycourses": "Mis cursos",
+        "viewallcourses": "Ver todos los cursos"
     },
     "Sidebar": {
         "mycourses": "Mis cursos",
@@ -16,6 +18,43 @@
         "nonread": "Tienes 3 notificaciones no leídas",
         "markasread": "Marcar como leído",
         "markallasread": "Marcar todo como leído"
+    },
+    "Coursecard": {
+        "addfavorite": "Agregar a favoritos",
+        "removefavorite": "Eliminar de favoritos",
+        "viewcourse": "Ir al curso",
+        "progress": "Progreso",
+        "lessons": "Lecciones"
+
+    },
+    "Activities": {
+        "lesson" : "Lección",
+        "assignment" : "Tarea",
+        "exam" : "Examen",
+        "teacher" : "Profesor",
+        "activity" : "Actividad",
+        "duration" : "Duración",
+        "myNextActivities" : "Mis próximas actividades",
+        "viewAll": "Ver todo"
+    },
+    "Calendar":{
+        "lesson" : "Lección",
+        "assignment" : "Tarea",
+        "exam" : "Examen",
+        "teacher" : "Profesor",
+        "activity" : "Actividad",
+        "duration" : "Duración",
+        "activities" : "Calendario",
+        "sun": "Dom",
+        "mon": "Lun",
+        "tue": "Mar",
+        "wed": "Mié",
+        "thu": "Jue",
+        "fri": "Vie",
+        "sat": "Sáb"
+        
     }
+
+
 
 }

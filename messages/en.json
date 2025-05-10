@@ -1,7 +1,9 @@
 {
     "Home": {
         "button1": "Button 1",
-        "button2": "Button 2"
+        "button2": "Button 2",
+        "mycourses": "My courses",
+        "viewallcourses": "View all courses"
     },
     "Sidebar": {
         "mycourses": "My courses",
@@ -16,5 +18,39 @@
         "nonread": "You have 3 unread notifications",
         "markasread": "Mark as read",
         "markallasread": "Mark all as read"
+    },
+    "Coursecard": {
+        "addfavorite": "Add to favorites",
+        "removefavorite": "Remove from favorites",
+        "viewcourse": "Go to course",
+        "progress": "Progress",
+        "lessons": "Lessons"
+    },
+    "Activities": {
+        "lesson": "Lesson",
+        "assignment": "Assignment",
+        "exam": "Exam",
+        "teacher": "Teacher",
+        "activity": "Activity",
+        "duration": "Duration",
+        "myNextActivities": "My next activities",
+        "viewAll": "View all"
+    },
+    "Calendar": {
+        "lesson": "Lesson",
+        "assignment": "Assignment",
+        "exam": "Exam",
+        "teacher": "Teacher",
+        "activity": "Activity",
+        "duration": "Duration",
+        "activities": "Calendar",
+        "sun": "Sun",
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat"
     }
+
 }
