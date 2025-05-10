@@ -8,8 +8,14 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import ThemeToggle from '../theme/ThemeToggle';
+} from "@/components/ui/tooltip";
+
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar";
+
 import { cn } from '@/lib/utils';
 
 type NavigationItem = {
@@ -48,18 +54,7 @@ export default function Sidebar() {
       {/* Contenido de la sidebar */}
       <div className="flex h-full flex-col justify-between">
         {/* Elementos de navegación */}
-        {isCollapsed && (
-          <div className="flex items-center justify-center h-16 bg-gray-700">
-            <ThemeToggle />
-          </div>
-        )}
-        {!isCollapsed && (
-          <div className="flex flex-row items-center h-16 bg-gray-700 pl-1.5">
 
-            <h1 className="text-lg font-bold text-white p-2">EduStream</h1>
-            <ThemeToggle />
-          </div>
-        )}
         <nav className="mt-8 space-y-2 px-2">
           {navigation.map((item) => (
             <a
@@ -93,13 +88,15 @@ export default function Sidebar() {
           <div className="relative">
             <button
               onClick={() => setIsPopoverOpen(!isPopoverOpen)}
-              className="flex w-full items-center gap-x-3 rounded-md p-2 hover:bg-gray-700"
+              className="flex w-full items-center gap-x-3 rounded-md p-2 hover:bg-gray-700 justify-center"
             >
-              <img
-                className="h-8 w-8 rounded-full"
-                src="https://via.placeholder.com/150"
-                alt="User avatar"
-              />
+              <Avatar>
+                <AvatarImage
+                  src="https://avatars.githubusercontent.com/u/70881259?v=4"
+                  alt="User avatar"
+                />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
               {!isCollapsed && (
                 <div className="text-left">
                   <p className="text-sm font-medium text-white">John Doe</p>
