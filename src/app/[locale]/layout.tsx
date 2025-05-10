@@ -54,7 +54,7 @@ export default async function LocaleLayout({
           <ThemeProvider>
             <div className="flex h-screen">
               <Sidebar />
-              <main className="flex-1 overflow-auto p-8">
+              <main className="flex-1 overflow-auto p-8 pt-0">
                 {children}
               </main>
               <div className="fixed bottom-4 right-4">
