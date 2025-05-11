@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { ChevronRight, ChevronDown, Crown, BookOpen, Lock, Globe, Users, Clock } from 'lucide-react'
 import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 
 
@@ -57,7 +58,7 @@ export default function CourseCategories({
   };
 
   return (
-    <div className="space-y-4 w-full max-w-3/11">
+    <div className="space-y-4 w-full">
       {/* Owner Courses */}
       <Collapsible open={openCategories.owner} onOpenChange={() => toggleCategory('owner')}>
         <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-indigo-50 dark:bg-slate-800 rounded-lg hover:bg-indigo-100 dark:hover:bg-slate-700 transition-colors">
@@ -70,20 +71,26 @@ export default function CourseCategories({
           </div>
           {openCategories.owner ? <ChevronDown className="h-5 w-5" /> : <ChevronRight className="h-5 w-5" />}
         </CollapsibleTrigger>
-        <CollapsibleContent className="pt-4 space-y-3 pl-5 max-h-56 overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:rounded-full [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-gray-600">
-          {ownerCourses && ownerCourses.length > 0 ? (
-            ownerCourses.map((course) => (
-              <CourseItem 
-                key={course.id} 
-                course={course} 
-                onClick={() => navigateToCourse(course.id)} 
-              />
-            ))
-          ) : (
-            <div className="text-center py-4 text-gray-500 dark:text-gray-400">
-              {t('noOwnerCourses')}
-            </div>
-          )}
+        
+        <CollapsibleContent className="pt-4 space-y-3 pl-5 flex flex-col">
+          <ScrollArea className="h-32 flex flex-col">
+            {ownerCourses && ownerCourses.length > 0 ? (
+              ownerCourses.map((course) => (
+                <div className="p-1" key={course.id}>
+                  <CourseItem 
+                    key={course.id} 
+                    course={course} 
+                    onClick={() => navigateToCourse(course.id)} 
+                  />
+                </div>
+              ))
+            ) : (
+              <div className="text-center py-4 text-gray-500 dark:text-gray-400">
+                {t('noOwnerCourses')}
+              </div>
+            )}
+          </ScrollArea>
+
         </CollapsibleContent>
       </Collapsible>
 
@@ -99,20 +106,28 @@ export default function CourseCategories({
           </div>
           {openCategories.enrolled ? <ChevronDown className="h-5 w-5" /> : <ChevronRight className="h-5 w-5" />}
         </CollapsibleTrigger>
-        <CollapsibleContent className="pt-4 space-y-3 pl-5 max-h-56 overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:rounded-full [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-gray-600">
-          {enrolledCourses && enrolledCourses.length > 0 ? (
-            enrolledCourses.map((course) => (
-              <CourseItem 
-                key={course.id} 
-                course={course} 
-                onClick={() => navigateToCourse(course.id)} 
-              />
-            ))
-          ) : (
-            <div className="text-center py-4 text-gray-500 dark:text-gray-400">
-              {t('noEnrolledCourses')}
-            </div>
-          )}
+        
+        <CollapsibleContent className="pt-4 space-y-3 pl-5 flex flex-col">
+          <ScrollArea className="h-32 flex flex-col">
+            {enrolledCourses && enrolledCourses.length > 0 ? (
+              
+              enrolledCourses.map((course) => (
+                <div className="p-1" key={course.id}>
+                  <CourseItem 
+                    key={course.id} 
+                    course={course} 
+                    onClick={() => navigateToCourse(course.id)} 
+                  />
+                </div>
+              ))
+              
+            ) : (
+              <div className="text-center py-4 text-gray-500 dark:text-gray-400">
+                {t('noEnrolledCourses')}
+              </div>
+            )}
+          </ScrollArea>
+
         </CollapsibleContent>
       </Collapsible>
 
