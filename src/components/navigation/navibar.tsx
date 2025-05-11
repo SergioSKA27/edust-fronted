@@ -17,7 +17,7 @@ export function NavigationBar({
   return (
     // make the background goes blurry when scrolling
 
-    <div className="w-full sticky top-0 z-10 backdrop-blur-sm transition-all duration-300 ease-in-out">
+    <div className="w-full sticky top-0 z-100 backdrop-blur-md transition-all duration-300 ease-in-out">
       <div className="container mx-auto px-4 py-3">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="flex-1">
