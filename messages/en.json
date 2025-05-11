@@ -59,7 +59,7 @@
         "sat": "Sat"
     },
     "MyCoursesPage": {
-        "title": "My courses",
+        "title": "Current courses",
         "search": "Search",
         "filter": "Filter",
         "allcourses": "All courses",
@@ -68,7 +68,9 @@
         "enrolled": "Enrolled",
         "notstarted": "Not started",
         "inprogress": "In progress",
-        "completed": "Completed"
+        "completed": "Completed",
+        "categories": "Categories",
+        "filters": "Filters"
     },
     "CourseCategories": {
       "ownerCourses": "Owned Courses",
@@ -81,6 +83,13 @@
       "noPrivateCourses": "You don't have private courses",
       "publicCourses": "Public Courses",
       "noPublicCourses": "You don't have public courses"
+    },
+    "CourseFilters": {
+        "all": "All",
+        "owner": "Owned",
+        "member": "Member",
+        "private": "Private",
+        "public": "Public"
     }
 
 }

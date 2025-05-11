@@ -61,7 +61,7 @@
         
     },
     "MyCoursesPage": {
-        "title": "Mis cursos",
+        "title": "Cursos Actuales",
         "search": "Buscar cursos",
         "filter": "Filtrar por",
         "allcourses": "Todos los cursos",
@@ -70,7 +70,9 @@
         "enrolled": "Inscrito",
         "notstarted": "No iniciado",
         "inprogress": "En progreso",
-        "completed": "Completado"
+        "completed": "Completado",
+        "categories": "Categorías",
+        "filters": "Filtros"
     },
     "CourseCategories": {
       "ownerCourses": "Cursos Propíos",
@@ -83,6 +85,13 @@
       "noPrivateCourses": "No tienes cursos privados",
       "publicCourses": "Cursos Públicos",
       "noPublicCourses": "No tienes cursos públicos"
+    },
+    "CourseFilters": {
+        "all": "Todos",
+        "owner": "Propios",
+        "member": "Miembro",
+        "private": "Privados",
+        "public": "Públicos"
     }
 
 
