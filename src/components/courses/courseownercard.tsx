@@ -50,15 +50,19 @@ export default function CourseOwnerCard({
             {/* Contenido de la tarjeta con posición relativa para superponerse sobre la imagen */}
             <div className="relative z-10 p-3 pt-22 pb-2 text-white">
                 <div className="flex justify-between items-start mb-1">
-                    <CardTitle className="text-lg font-bold text-white h-12 overflow-y-hidden">{courseName}</CardTitle>
-                    <div className="flex space-x-2">
-                        <Button variant="ghost" size="icon" className="text-white/70 hover:text-white hover:bg-white/20" onClick={onEdit}>
-                            <Pencil className="h-4 w-4" />
-                        </Button>
-                        <Button variant="ghost" size="icon" className="text-white/70 hover:text-white hover:bg-white/20" onClick={onSettings}>
-                            <Settings className="h-4 w-4" />
-                        </Button>
-                    </div>
+                    <CardTitle className="text-lg font-bold text-white h-14 overflow-y-hidden">{courseName}</CardTitle>
+                    {
+                        isOwner && (
+                            <div className="flex space-x-2">
+                                <Button variant="ghost" size="icon" className="text-white/70 hover:text-white hover:bg-white/20" onClick={onEdit}>
+                                    <Pencil className="h-4 w-4" />
+                                </Button>
+                                <Button variant="ghost" size="icon" className="text-white/70 hover:text-white hover:bg-white/20" onClick={onSettings}>
+                                    <Settings className="h-4 w-4" />
+                                </Button>
+                            </div>
+                        )
+                    }
                 </div>
                 
                 <p className="text-white/80 mb-4 line-clamp-2 text-xs">{courseDescription}</p>
