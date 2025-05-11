@@ -30,7 +30,7 @@ export default function Sidebar() {
   const t = useTranslations('Sidebar');
 
   const navigation: NavigationItem[] = [
-    { name: t('mycourses'), icon: <School />, href: '#' },
+    { name: t('mycourses'), icon: <School />, href: '/mycourses' },
     { name: t('myevaluations'), icon: <BookOpenCheck />, href: '#' },
     { name: t('myhomeworks'), icon: <Backpack />, href: '#' },
     { name: t('myprojects'), icon: <Presentation />, href: '#' },
