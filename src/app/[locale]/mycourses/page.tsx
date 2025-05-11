@@ -3,11 +3,19 @@ import { CardDemo } from '@/components/dashboard/Notifications'
 import { MainBreadcrumb } from '@/components/breadcrumb/MainBreadcrumb'
 import {useTranslations} from 'next-intl';
 import { Separator } from "@/components/ui/separator";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button";
 import CourseCard from '@/components/courses/coursecard';
 import NextActivitiesCard from "@/components/activities/nextacts";
 import ActivityCalendar from '@/components/calendar/activitycalendar';
 import { NavigationBar } from '@/components/navigation/navibar';
+import { CourseFilters } from '@/components/courses/coursefilters';
+
 import CourseOwnerCard from '@/components/courses/courseownercard';
 import CourseCategories from '@/components/courses/collapcourses';
 
@@ -17,6 +25,9 @@ interface BreadcrumbItemType {
   label: string;
   href?: string; // Opcional para el último elemento que es solo texto
 }
+
+export type CourseFilterType = "all" | "owner" | "member" | "public" | "private"
+
 
 const breadcrumbitems: BreadcrumbItemType[] = [
     {
@@ -162,20 +173,30 @@ export default function MyCoursesPage() {
         <div className="w-full mx-auto">
             <NavigationBar items={breadcrumbitems} />
             <div className="w-full">
-                <div className="flex flex-col gap-2 p-2 pl-0">
-                    <h1 className="text-2xl font-bold">{t('title')}</h1>
-                    <Separator className="my-0" />
-                </div>
-                <div className="flex flex-row gap-5 p-2 pt-0.5 pl-0 justify-between">
-                  
-                  <div className="md:grid md:grid-cols-2 gap-4 p-2 pl-0 relative">
-                      {
-                          dummyOwnerCourses.map((course, index) => (
-                              <CourseOwnerCard {...course} key={index}/>
-                          ))
-                      }
+                <Separator className="my-2" />
+                <div className="flex flex-row gap-3 p-2 pt-0.5 pl-0 justify-center">
+                  <div className="flex flex-col">
+                    <div className="flex flex-col gap-2 p-2 pl-0 pt-0">
+                        <h1 className="text-xs font-light text-slate-500 dark:text-slate-300">{t('title')}</h1>
+                    </div>
+                    <div className="md:grid md:grid-cols-2 gap-4 p-2 pl-0 relative">
+                        {
+                            dummyOwnerCourses.map((course, index) => (
+                                <CourseOwnerCard {...course} key={index}/>
+                            ))
+                        }
+                    
+                    </div>
                   </div>
-                  <CourseCategories {...collapCoursesprops} />
+
+                  <div className="flex flex-col w-5/12 gap-2">
+                    <h1 className="text-xs font-light text-slate-500 dark:text-slate-300">{t('filters')}</h1>
+                    <CourseFilters defaultValue='all'className='flex'/>
+                    <h1 className="text-xs font-light pb-2 text-slate-500 dark:text-slate-300">{t('categories')}</h1>
+                    <CourseCategories {...collapCoursesprops} />
+                  </div>
+
+                  
                 </div>
             </div>
         </div>
