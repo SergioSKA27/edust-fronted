@@ -57,7 +57,7 @@ export default async function LocaleLayout({
               <main className="flex-1 overflow-auto p-8 pt-0">
                 {children}
               </main>
-              <div className="fixed bottom-4 right-4">
+              <div className="fixed bottom-8 right-8">
                 <ThemeToggle />
               </div>
             </div>
