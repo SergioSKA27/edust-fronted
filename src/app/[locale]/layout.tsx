@@ -54,7 +54,7 @@ export default async function LocaleLayout({
           <ThemeProvider>
             <div className="flex h-screen">
               <Sidebar />
-              <main className="flex-1 overflow-auto p-8 pt-0">
+              <main className="flex-1 overflow-auto p-8 pt-0 overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 ">
                 {children}
               </main>
               <div className="fixed bottom-8 right-8">
